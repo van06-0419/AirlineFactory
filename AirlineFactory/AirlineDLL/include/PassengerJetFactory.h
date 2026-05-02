@@ -1,5 +1,4 @@
 #pragma once
-
 #include "AircraftFactory.h"
 #include "PassengerJet.h"
 
