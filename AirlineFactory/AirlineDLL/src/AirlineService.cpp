@@ -1,13 +1,21 @@
 #include "../include/AirlineService.h"
 
+// добавление одного самолёта
 void AirlineService::AddAircraft(Airline& airline, AircraftFactory& factory) {
-    // 应用逻辑：通过工厂创建飞机并添加到航空公司
     airline.AddAircraft(factory.Create());
 }
 
+// добавление нескольких самолётов
 void AirlineService::AddMultipleAircraft(Airline& airline, std::vector<AircraftFactory*>& factories) {
-    for (AircraftFactory* factory : factories) {
+    // Получить количество фабрик 
+    int count = factories.size();
+    for (int i = 0; i < count; i++) {
+        // Получить i-ый указатель на фабрику
+        AircraftFactory* factory = factories[i];
+
+        // Проверка безопасности: использовать только если фабрика не nullptr
         if (factory != nullptr) {
+            // Создать самолёт и добавить в флот
             airline.AddAircraft(factory->Create());
         }
     }
