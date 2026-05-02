@@ -1,6 +1,6 @@
 #include "../include/AirlineService.h"
 
-// добавление одного самолёта
+// добавление самолёта
 void AirlineService::AddAircraft(Airline& airline, AircraftFactory& factory) {
     airline.AddAircraft(factory.Create());
 }
