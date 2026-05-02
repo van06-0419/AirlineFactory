@@ -1,5 +1,4 @@
 #pragma once
-
 #include "AbstractAircraft.h"
 #include "dll_export.h"
 
