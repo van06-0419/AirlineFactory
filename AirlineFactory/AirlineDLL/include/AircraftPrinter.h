@@ -5,7 +5,7 @@
 #include "PassengerJet.h"
 #include "CargoPlane.h"
 
-// Класс для вывода информации о самолётах (сервисный класс)
+// Класс для вывода информации о самолётах
 class AIRLINE_API AircraftPrinter {
 public:
     static void Print(const AbstractAircraft* aircraft);
